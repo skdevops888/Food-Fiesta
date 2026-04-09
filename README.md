@@ -1,4 +1,11 @@
-# 🍽️ Food Fiesta - Premium Dining Management System
+# 🍽️ Food Fiesta - Professional Spring Boot & Java Fullstack Project
+
+**Food Fiesta** is a high-performance **Fullstack Project** and **Backend Project** ecosystem. Developed using **Java 25** and **Spring Boot 3.4**, this project demonstrates a modern **REST API** architecture integrated with a **Postgres** database.
+
+### 🏷️ Project Tags
+`#SpringBoot` `#Java` `#RestAPI` `#BackendProject` `#Postgres` `#FullstackProject` `#EnterpriseApp`
+
+---
 
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.2-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![Java](https://img.shields.io/badge/Java-25-orange.svg)](https://www.oracle.com/java/)
@@ -109,4 +116,17 @@
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
+
+## 📈 Search Optimization & Keywords Index
+<!-- 
+Target Search Terms:
+- Spring Boot Project
+- Java Fullstack Project
+- REST API Backend Project
+- Postgres Database Integration
+- Professional Java Backend Project
+- Fullstack Web Application Spring Boot
+- Spring Security & JWT
+-->
+
 Developed with ❤️ by **imrajeevnayan**
