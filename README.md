@@ -17,23 +17,23 @@
 
 ### 🏠 Landing & Identity
 <p align="center">
-  <img src="https://github.com/imrajeevnayan/Food-Fiesta/blob/main/.github/screenshots/story.png?raw=true" width="800" alt="Our Story Page">
+  <img src="./screenshots/about.png" width="800" alt="About Page">
 </p>
 
 ### 👤 Authentication & Security
 <p align="center">
-  <img src="https://github.com/imrajeevnayan/Food-Fiesta/blob/main/.github/screenshots/login.png?raw=true" width="45%" alt="Dual Login System">
-  <img src="https://github.com/imrajeevnayan/Food-Fiesta/blob/main/.github/screenshots/register.png?raw=true" width="45%" alt="User Registration">
+  <img src="./screenshots/login.png" width="45%" alt="Dual Login System">
+  <img src="./screenshots/register.png" width="45%" alt="User Registration">
 </p>
 
 ### 🛒 User Experience & Dashboard
 <p align="center">
-  <img src="https://github.com/imrajeevnayan/Food-Fiesta/blob/main/.github/screenshots/dashboard.png?raw=true" width="800" alt="User Personalized Dashboard">
+  <img src="./screenshot/userLogin.png" width="800" alt="User Personalized Dashboard">
 </p>
 
 ### 📄 Professional API Documentation
 <p align="center">
-  <img src="https://github.com/imrajeevnayan/Food-Fiesta/blob/main/.github/screenshots/swagger.png?raw=true" width="800" alt="Swagger OpenAPI Docs">
+  <img src="./screenshot/swagger-ui-index-html.png width="800" alt="Swagger OpenAPI Docs">
 </p>
 
 ---
