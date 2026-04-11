@@ -70,6 +70,47 @@
 | **Documentation** | SpringDoc OpenAPI (Swagger UI) |
 | **Frontend** | Thymeleaf, Vanilla CSS (Modern CSS3 Variables), JavaScript |
 | **Build Tool** | Maven (wrapper included) |
+| **API Testing** | Postman, Swagger |
+
+---
+
+## 📊 Database Architecture (ER Diagram)
+
+The following diagram illustrates the relationship between the core entities in the **Food Fiesta** ecosystem:
+
+```mermaid
+erDiagram
+    USER ||--o{ ORDERS : "places"
+    USER {
+        int u_id PK
+        string uname
+        string uemail
+        string upassword
+        long unumber
+    }
+    ADMIN {
+        int adminId PK
+        string adminName
+        string adminEmail
+        string adminPassword
+        string adminNumber
+    }
+    PRODUCT {
+        int pid PK
+        string pname
+        double pprice
+        string pdescription
+    }
+    ORDERS {
+        int oId PK
+        string oName
+        double oPrice
+        int oQuantity
+        date orderDate
+        double totalAmmout
+        int user_u_id FK
+    }
+```
 
 ---
 
@@ -85,6 +126,38 @@
    ```bash
    git clone https://github.com/imrajeevnayan/Food-Fiesta.git
    ```
+
+---
+
+## 🐳 Docker Deployment
+
+The application is fully dockerized for seamless deployment.
+
+### 1. Build the Image
+```bash
+docker build -t food-fiesta .
+```
+
+### 2. Run the Container
+```bash
+docker run -p 8080:8080 --name food-fiesta-app food-fiesta
+```
+
+### 3. Orchestrate with Docker Compose (Recommended)
+Launch both the App and the PostgreSQL database with a single command:
+```bash
+docker-compose up -d
+```
+
+> [!TIP]
+> Use `docker-compose logs -f app` to follow the application logs.
+
+> [!NOTE]
+> Ensure you have a PostgreSQL instance running and accessible if not using Compose. You can override database credentials using environment variables:
+> `docker run -e SPRING_DATASOURCE_URL=... -p 8080:8080 food-fiesta`
+
+---
+
 2. **Configure PostgreSQL**
    Update `src/main/resources/application.properties` with your local database credentials:
    ```properties
