@@ -1,83 +1,98 @@
-# 🍽️ Food Fiesta - Professional Spring Boot & Java Fullstack Project
+# Food Fiesta - Spring Boot Fullstack Project
 
-**Food Fiesta** is a high-performance **Fullstack Project** and **Backend Project** ecosystem. Developed using **Java 25** and **Spring Boot 3.4**, this project demonstrates a modern **REST API** architecture integrated with a **Postgres** database.
+**Food Fiesta** is a Spring Boot fullstack dining management application built with **Java 21**, **Spring Boot 3.4.2**, **Thymeleaf**, **Spring Security**, **Spring Data JPA**, and **H2** for quick local development.
 
-### 🏷️ Project Tags
-`#SpringBoot` `#Java` `#RestAPI` `#BackendProject` `#Postgres` `#FullstackProject` `#EnterpriseApp`
+The project can also be configured to use PostgreSQL for deployment or production-style testing.
+
+## Project Tags
+
+`#SpringBoot` `#Java21` `#RestAPI` `#BackendProject` `#H2Database` `#PostgreSQL` `#Thymeleaf` `#FullstackProject`
 
 ---
 
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.2-brightgreen.svg)](https://spring.io/projects/spring-boot)
-[![Java](https://img.shields.io/badge/Java-25-orange.svg)](https://www.oracle.com/java/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-latest-blue.svg)](https://www.postgresql.org/)
+[![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://www.oracle.com/java/)
+[![H2](https://img.shields.io/badge/Database-H2-blue.svg)](https://www.h2database.com/)
 [![Swagger](https://img.shields.io/badge/Swagger-OpenAPI%203-85EA2D.svg)](https://swagger.io/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Food Fiesta** is a professional-grade, full-stack dining management ecosystem designed for high-end restaurant operations. Built with modern technologies, it offers a seamless blend of aesthetic excellence and robust backend logic.
-
 ---
 
-## 📸 Interface Preview
+## Interface Preview
 
-> [!TIP]
-> **Recruiters:** Click the images below to view high-resolution previews of our premium UI/UX.
+### Home Page
 
-### 🏠 Landing & Identity
+<p align="center">
+  <img src="./screenshot/home.png" width="800" alt="Home Page">
+</p>
+
+### About Page
+
 <p align="center">
   <img src="./screenshot/about.png" width="800" alt="About Page">
 </p>
 
-### 👤 Authentication & Security
+### Authentication & Security
+
 <p align="center">
   <img src="./screenshot/login.png" width="45%" alt="Dual Login System">
   <img src="./screenshot/register.png" width="45%" alt="User Registration">
 </p>
 
-### 🛒 User Experience & Dashboard
+### Products
+
+<p align="center">
+  <img src="./screenshot/products.png" width="800" alt="Products Page">
+</p>
+
+### User Experience & Dashboard
+
 <p align="center">
   <img src="./screenshot/userLogin.png" width="800" alt="User Personalized Dashboard">
 </p>
 
-### 🛡️ Admin Management Console
+### Admin Management Console
+
 <p align="center">
   <img src="./screenshot/admin-services.png" width="800" alt="Admin Dashboard Overview">
 </p>
 
-### 📄 Professional API Documentation
+### API Documentation
+
 <p align="center">
-  <img src="./screenshot/swagger-ui-index-html.png"  width="800" alt="Swagger OpenAPI Docs">
+  <img src="./screenshot/swagger-ui-index-html.png" width="800" alt="Swagger OpenAPI Docs">
 </p>
 
 ---
 
-## 🚀 Core Features
+## Core Features
 
-- **🎨 Premium UI Overhaul**: Implemented a cohesive "Burnt Orange & Slate" design language with glassmorphism components and fluid animations.
-- **🛡️ Secure Gateway**: Role-based access control (RBAC) ensuring dedicated environments for Admins and Customers.
-- **🔍 Smart Search**: Case-insensitive, partial-match product discovery powered by optimized JPA queries.
-- **📦 Inventory Suite**: Comprehensive management for food categories (Biryani, North Indian, Chinese, Desserts).
-- **🔑 Social Authentication**: Integrated **Google OAuth2** for seamless signup and login experience.
-- **📄 Interactive Documentation**: Full OpenAPI/Swagger integration allowing for direct API testing and exploration.
-- **📊 Real-time Order Tracking**: Personalized order history and status tracking for registered users.
+- Premium Thymeleaf UI with modern CSS and JavaScript.
+- Role-based admin and customer flows.
+- Product inventory management.
+- User registration and login.
+- Order placement and order history.
+- Spring Data JPA persistence.
+- H2 database for fast local startup.
+- Swagger/OpenAPI documentation.
+- Optional Google OAuth2 login configuration.
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Layer | Technology |
 | :--- | :--- |
-| **Backend** | Java 25, Spring Boot 3.4.2, Spring Security, Hibernate |
-| **Database** | PostgreSQL |
-| **Documentation** | SpringDoc OpenAPI (Swagger UI) |
-| **Frontend** | Thymeleaf, Vanilla CSS (Modern CSS3 Variables), JavaScript |
-| **Build Tool** | Maven (wrapper included) |
-| **API Testing** | Postman, Swagger |
+| Backend | Java 21, Spring Boot 3.4.2, Spring Security, Hibernate |
+| Database | H2 for local development, PostgreSQL optional |
+| Documentation | SpringDoc OpenAPI / Swagger UI |
+| Frontend | Thymeleaf, CSS, JavaScript |
+| Build Tool | Maven Wrapper |
+| API Testing | Swagger, Postman |
 
 ---
 
-## 📊 Database Architecture (ER Diagram)
-
-The following diagram illustrates the relationship between the core entities in the **Food Fiesta** ecosystem:
+## Database Architecture
 
 ```mermaid
 erDiagram
@@ -115,105 +130,171 @@ erDiagram
 
 ---
 
-## ⚙️ Setup and Installation
+## Prerequisites
 
-### Prerequisites
-- JDK 21 or later (Java 25 recommended)
-- PostgreSQL (running on port 5432)
-- Maven 3.8+
+- JDK 21
+- Maven is optional because the Maven wrapper is included
 
-### Quick Start
-1. **Clone the Project**
-   ```bash
-   git clone https://github.com/imrajeevnayan/Food-Fiesta.git
-   ```
+Docker and PostgreSQL are only needed if you choose the PostgreSQL/Docker setup.
 
 ---
 
-## 🐳 Docker Deployment
+## Quick Start With H2
 
-The application is fully dockerized for seamless deployment.
+Clone the project:
 
-### 1. Build the Image
+```bash
+git clone https://github.com/imrajeevnayan/Food-Fiesta.git
+cd Food-Fiesta
+```
+
+Run the application:
+
+```bash
+./mvnw spring-boot:run
+```
+
+On Windows PowerShell:
+
+```powershell
+.\mvnw.cmd spring-boot:run
+```
+
+If `JAVA_HOME` is not set on Windows, set it before running Maven:
+
+```powershell
+$env:JAVA_HOME="C:\Program Files\Java\jdk-21.0.11"
+.\mvnw.cmd spring-boot:run
+```
+
+Open the app:
+
+- Frontend: [http://localhost:8080/](http://localhost:8080/)
+- Swagger UI: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+- H2 Console: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+
+H2 console connection:
+
+```text
+JDBC URL: jdbc:h2:mem:foodfiesta
+User Name: sa
+Password:
+```
+
+The H2 database is in-memory, so data resets when the application stops.
+
+---
+
+## Default Seeded Data
+
+The app seeds sample products and a default admin account on startup.
+
+```text
+Admin email: admin@foodfiesta.com
+Admin password: admin123
+```
+
+---
+
+## Current Local Database Configuration
+
+The default `src/main/resources/application.properties` uses H2:
+
+```properties
+spring.datasource.url=jdbc:h2:mem:foodfiesta
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+spring.jpa.hibernate.ddl-auto=create-drop
+```
+
+---
+
+## Optional PostgreSQL Configuration
+
+To use PostgreSQL instead of H2, update `src/main/resources/application.properties`:
+
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/foodfiesta
+spring.datasource.username=postgres
+spring.datasource.password=YOUR_PASSWORD
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+```
+
+PostgreSQL should be running on port `5432`, and the `foodfiesta` database should exist.
+
+---
+
+## Optional Google OAuth2
+
+To enable Google login:
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/).
+2. Create an OAuth 2.0 Client ID.
+3. Add this authorized redirect URI:
+
+```text
+http://localhost:8080/login/oauth2/code/google
+```
+
+4. Update `src/main/resources/application.properties`:
+
+```properties
+spring.security.oauth2.client.registration.google.client-id=YOUR_CLIENT_ID
+spring.security.oauth2.client.registration.google.client-secret=YOUR_CLIENT_SECRET
+```
+
+---
+
+## Docker Deployment
+
+Build the image:
+
 ```bash
 docker build -t food-fiesta .
 ```
 
-### 2. Run the Container
+Run with Docker:
+
 ```bash
 docker run -p 8080:8080 --name food-fiesta-app food-fiesta
 ```
 
-### 3. Orchestrate with Docker Compose (Recommended)
-Launch both the App and the PostgreSQL database with a single command:
+Run app and PostgreSQL together:
+
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
-> [!TIP]
-> Use `docker-compose logs -f app` to follow the application logs.
+Follow logs:
 
-> [!NOTE]
-> Ensure you have a PostgreSQL instance running and accessible if not using Compose. You can override database credentials using environment variables:
-> `docker run -e SPRING_DATASOURCE_URL=... -p 8080:8080 food-fiesta`
-
----
-
-2. **Configure PostgreSQL**
-   Update `src/main/resources/application.properties` with your local database credentials:
-   ```properties
-   spring.datasource.url=jdbc:postgresql://localhost:5432/foodfiesta
-   spring.datasource.username=YOUR_USERNAME
-   spring.datasource.password=YOUR_PASSWORD
-   ```
-
-3. **Configure Google OAuth2** (Optional but Recommended)
-   To enable and use Google Login:
-   - Go to [Google Cloud Console](https://console.cloud.google.com/).
-   - Create a new project and navigate to **APIs & Services > Credentials**.
-   - Create an **OAuth 2.0 Client ID**.
-   - Add `http://localhost:8080/login/oauth2/code/google` to the **Authorized redirect URIs**.
-   - Update `src/main/resources/application.properties` with your credentials:
-     ```properties
-     spring.security.oauth2.client.registration.google.client-id=YOUR_CLIENT_ID
-     spring.security.oauth2.client.registration.google.client-secret=YOUR_CLIENT_SECRET
-     ```
-
-4. **Build & Execute**
-   ```bash
-   ./mvnw clean install
-   ./mvnw spring-boot:run
-   ```
-4. **Explore the App**
-   - **Frontend**: [http://localhost:8080/](http://localhost:8080/)
-   - **API Docs**: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+```bash
+docker compose logs -f app
+```
 
 ---
 
-## 🤝 Contributing
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Build
+
+```bash
+./mvnw clean package
+```
+
+On Windows:
+
+```powershell
+.\mvnw.cmd clean package
+```
 
 ---
 
-## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
+## License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-## 📈 Search Optimization & Keywords Index
-<!-- 
-Target Search Terms:
-- Spring Boot Project
-- Java Fullstack Project
-- REST API Backend Project
-- Postgres Database Integration
-- Professional Java Backend Project
-- Fullstack Web Application Spring Boot
-- Spring Security & JWT
--->
-
-Developed with ❤️ by **imrajeevnayan**
+Developed by **imrajeevnayan**
