@@ -38,9 +38,7 @@ USER spring:spring
 EXPOSE 8080
 
 # Configure environment variables for PostgreSQL (can be overridden at runtime)
-ENV SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/foodfiesta
-ENV SPRING_DATASOURCE_USERNAME=postgres
-ENV SPRING_DATASOURCE_PASSWORD=password
+
 
 # Execution script
 ENTRYPOINT ["./entrypoint.sh"]
