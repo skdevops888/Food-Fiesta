@@ -1,4 +1,4 @@
-# Food Fiesta - Spring Boot Fullstack Project by samir
+# Food Fiesta - Spring Boot Fullstack Project by samir k singh
 
 **Food Fiesta** is a Spring Boot fullstack dining management application built with **Java 21**, **Spring Boot 3.4.2**, **Thymeleaf**, **Spring Security**, **Spring Data JPA**, and **H2** for quick local development.
 
